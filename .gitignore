@@ -1,0 +1,30 @@
+# Go specific
+/bin/
+/obj/
+*.exe
+*.out
+*.test
+*.prof
+*.log
+
+# Vendor directory (if using Go modules, this might be unnecessary)
+/vendor/
+
+# IDE files
+.idea/
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Go module files (if using Go modules)
+go.sum
+go.mod
+
+# Coverage reports
+*.coverage
+*.cov
+
+#enviroment variables
+*.env
