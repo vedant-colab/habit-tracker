@@ -16,6 +16,7 @@ import (
 
 func RegisterRoutes(r *echo.Group) {
 	routes.UserRoutes(r)
+	routes.HabitRoutes(r)
 }
 
 func main() {

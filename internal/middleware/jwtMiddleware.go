@@ -28,7 +28,7 @@ func JWTMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		}
 
 		// Store claims in context (for future use, e.g., in handler)
-		c.Set("user", claims)
+		c.Set("user", claims["username"])
 
 		return next(c)
 	}
