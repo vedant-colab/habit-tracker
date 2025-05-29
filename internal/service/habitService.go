@@ -17,3 +17,29 @@ func CreateHabitService(createHabitRequest *dto.CreateHabitRequest) error {
 	return nil
 
 }
+
+func UpdateHabitService(username string, id int, updateHabitRequset *dto.UpdateHabitRequest) error {
+	habit := repository.Habit{
+		Username: username,
+		ID:       id,
+		Name:     updateHabitRequset.Name,
+	}
+
+	if err := repository.UpdateHabitRepository(habit); err != nil {
+		return err
+	}
+	return nil
+}
+
+func DeleteHabitService(username string, id int, updateHabitRequset *dto.UpdateHabitRequest) error {
+	habit := repository.Habit{
+		Username: username,
+		ID:       id,
+		Name:     updateHabitRequset.Name,
+	}
+
+	if err := repository.DeleteHabitRepository(habit); err != nil {
+		return err
+	}
+	return nil
+}

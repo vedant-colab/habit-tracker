@@ -40,5 +40,7 @@ func main() {
 		return nil
 	})
 
+	e.Debug = true
+
 	e.Logger.Fatal(e.Start(":3000"))
 }
